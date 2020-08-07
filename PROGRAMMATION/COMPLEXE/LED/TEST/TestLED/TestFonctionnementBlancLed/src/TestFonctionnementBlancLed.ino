@@ -11,7 +11,7 @@ void setup() {
 
   
   FastLED.clear(); // Initialisation FastLed
-  FastLED.addLeds<NEOPIXEL,6>(leds, NUM_LEDS); // Paramétrage de FastLed
+  FastLED.addLeds<NEOPIXEL,4>(leds, NUM_LEDS); // Paramétrage de FastLed
    CRGB color = CRGB(255,255,255); // Création de la couleur blanche à partir de composantes RGB
    FastLED.setBrightness(255); // Paramétrage de la luminosité
   
