@@ -1,0 +1,49 @@
+@page "/DeviceCommands"
+
+@using PatioSim.Data
+@using PatioSim.Data.Models
+@using PatioSim.Data.Services
+
+@inject DeviceCommandService DeviceCommandService
+
+<h1>DeviceCommands</h1>
+
+<p>List of devices</p>
+
+@if (DeviceCommands == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>DeviceCommandId</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>IsDisabled</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var DeviceCommand in DeviceCommands)
+            {
+                <tr>
+                    <td>@DeviceCommand.ID.ToString()</td>
+                    <td>@DeviceCommand.Name</td>
+                    <td>@DeviceCommand.Description</td>
+                    <td>@DeviceCommand.IsDisabled</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private DeviceCommand[] DeviceCommands;
+
+    protected override async Task OnInitializedAsync()
+    {
+        DeviceCommands = await DeviceCommandService.GetDeviceCommandsAsync();
+    }
+}

@@ -1,0 +1,111 @@
+@page "/devices"
+
+@using PatioSim.Data
+@using PatioSim.Data.Models
+@using PatioSim.Data.Services
+
+@inject DeviceService DeviceService
+
+<h1>Devices</h1>
+
+<p>List of devices</p>
+
+<button class="btn btn-primary" @onclick="ShowDialog">Add a Device</button>
+
+@code {
+    private bool showDialog = false;
+
+    private void ShowDialog()
+    {
+        showDialog = true;
+    }
+    private void HideDialog()
+    {
+        showDialog = false;
+    }
+}
+
+ @if (showDialog)
+        {
+            var device = new Device();
+            <!-- This is the popup to create or edit a forecast -->
+            <div class="modal" tabindex="-1" style="display:block" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title">Edit Device</h3>
+                            <!-- Button to close the popup -->
+                            <button type="button" class="close"
+                                    @onclick="HideDialog">
+                                <span aria-hidden="true">X</span>
+                            </button>
+                        </div>
+                        <!-- Edit form for the current device -->
+                        <div class="modal-body">
+                            <input class="form-control" type="text"
+                                   placeholder="Device Name"
+                                   @bind="device.Name" />
+                            <input class="form-control" type="text"
+                                   placeholder="Device Description"
+                                   @bind="device.Description" />
+                            <InputSelect @bind-Value="device.DeviceType">
+                                @foreach (var deviceType in Enum.GetValues(typeof(DeviceType)))
+                                {
+                                    <option value="@deviceType">@deviceType</option>
+                                }
+                            </InputSelect>
+                            <br />
+                            <!-- Button to save the forecast -->
+                            <button class="btn btn-primary"
+                                    @onclick="AddDevice(device)">
+                                Save
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+@if (devices == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>DeviceId</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>IsDisabled</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var device in devices)
+            {
+                <tr>
+                    <td>@device.ID.ToString()</td>
+                    <td>@device.Name</td>
+                    <td>@device.Description</td>
+                    <td>@device.IsDisabled</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private Device[] devices;
+
+    public EventCallback AddDevice(Device device)
+    {
+        DeviceService.CreateDeviceAsync(device);
+        return new EventCallback();
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        devices = await DeviceService.GetDevicesAsync();
+    }
+}

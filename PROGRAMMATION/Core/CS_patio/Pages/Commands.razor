@@ -1,0 +1,49 @@
+@page "/commands"
+
+@using PatioSim.Data
+@using PatioSim.Data.Models
+@using PatioSim.Data.Services
+
+@inject CommandService CommandService
+
+<h1>Commands</h1>
+
+<p>List of commands</p>
+
+@if (commands == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>CommandId</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>CustomCommand</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var command in commands)
+            {
+                <tr>
+                    <td>@command.ID.ToString()</td>
+                    <td>@command.Name</td>
+                    <td>@command.Description</td>
+                    <td>@command.CustomCommand</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private Command[] commands;
+
+    protected override async Task OnInitializedAsync()
+    {
+        commands = await CommandService.GetCommandsAsync();
+    }
+}

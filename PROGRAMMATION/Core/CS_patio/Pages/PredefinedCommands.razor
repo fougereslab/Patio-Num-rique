@@ -1,0 +1,49 @@
+@page "/predefcom"
+
+@using PatioSim.Data
+@using PatioSim.Data.Models
+@using PatioSim.Data.Services
+
+@inject PredefinedCommandService PredefinedCommandService
+
+<h1>PredefinedCommands</h1>
+
+<p>List of PredefinedCommands</p>
+
+@if (predefinedCommands == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>PredefinedCommandId</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>IsDisabled</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var PredefinedCommand in predefinedCommands)
+            {
+                <tr>
+                    <td>@PredefinedCommand.ID.ToString()</td>
+                    <td>@PredefinedCommand.Name</td>
+                    <td>@PredefinedCommand.Description</td>
+                    <td>@PredefinedCommand.IsDisabled</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private PredefinedCommand[] predefinedCommands;
+
+    protected override async Task OnInitializedAsync()
+    {
+        predefinedCommands = await PredefinedCommandService.GetPredefinedCommandsAsync();
+    }
+}

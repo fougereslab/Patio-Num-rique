@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   sodipodi:docname="Patio_map.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.5"
+     inkscape:cx="353.78571"
+     inkscape:cy="620.95238"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1015"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g3725">
+      <desc
+         id="desc3729">Walls</desc>
+      <title
+         id="title3727">Walls</title>
+      <rect
+         style="stroke-width:0.29295072"
+         y="85.508331"
+         x="6.6145835"
+         height="3"
+         width="202.96458"
+         id="rect3713" />
+      <rect
+         style="stroke-width:0.24709854"
+         y="71.04583"
+         x="28.839582"
+         height="119.0625"
+         width="3"
+         id="rect3715" />
+      <rect
+         style="stroke-width:0.23912963"
+         y="187.63748"
+         x="6.3500013"
+         height="3"
+         width="190"
+         id="rect3717" />
+      <rect
+         style="stroke-width:0.20999344"
+         y="85.597916"
+         x="193.675"
+         height="105.03957"
+         width="3"
+         id="rect3719" />
+    </g>
+    <rect
+       id="rect3731"
+       width="21.960417"
+       height="48.154167"
+       x="55.5625"
+       y="124.49166"
+       style="fill:#aca793;stroke-width:0.22576109">
+      <desc
+         id="desc3735">Plaque beton</desc>
+      <title
+         id="title3733">Beton</title>
+    </rect>
+    <rect
+       style="fill:#ff8080;stroke-width:0.26458332"
+       id="rect3764"
+       width="14.287499"
+       height="12.347222"
+       x="100.18889"
+       y="131.7236">
+      <title
+         id="title3766">PlexiglassLED1</title>
+    </rect>
+    <circle
+       style="fill:#00ff00;stroke-width:0.26458332"
+       id="path3737"
+       cx="106.0979"
+       cy="137.80904"
+       r="3.0868056">
+      <desc
+         id="desc3741">Arbre gauche</desc>
+      <title
+         id="title3739">Tree1</title>
+    </circle>
+    <rect
+       style="fill:#ff8080;stroke-width:0.26458332"
+       id="rect3764-5"
+       width="14.2875"
+       height="12.347222"
+       x="156.19215"
+       y="146.54028">
+      <title
+         id="title3766-3">PlexiglassLED2</title>
+    </rect>
+    <circle
+       style="fill:#00ff00;stroke-width:0.26458332"
+       id="path3737-3"
+       cx="165.45256"
+       cy="153.06667"
+       r="3.0868056">
+      <desc
+         id="desc3741-6">Arbre droite</desc>
+      <title
+         id="title3739-7">Tree2</title>
+    </circle>
+    <rect
+       style="fill:#00ffff;stroke-width:0.26458332"
+       id="rect3786"
+       width="18.697222"
+       height="10.054167"
+       x="125.23611"
+       y="141.95418">
+      <title
+         id="title3788">Bassin</title>
+    </rect>
+    <circle
+       style="fill:#ff0000;stroke-width:0.22930554"
+       id="path3790"
+       cx="111.47778"
+       cy="137.72086"
+       r="2.2930555">
+      <desc
+         id="desc3794">Pilier lumineux1</desc>
+      <title
+         id="title3792">Colonne1</title>
+    </circle>
+    <circle
+       style="fill:#ff0000;stroke-width:0.22930554"
+       id="path3790-5"
+       cx="159.98473"
+       cy="152.89027"
+       r="2.2930555">
+      <desc
+         id="desc3794-6">Pilier lumineux2</desc>
+      <title
+         id="title3792-2">Colonne2</title>
+    </circle>
+    <rect
+       style="fill:#00ffff;stroke-width:0.20905374"
+       id="rect3786-9"
+       width="14.463888"
+       height="8.1138887"
+       x="31.75"
+       y="88.596527">
+      <title
+         id="title3788-1">Armoire</title>
+    </rect>
+  </g>
+</svg>
