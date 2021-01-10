@@ -13,6 +13,7 @@
   * Docs
   * Bidouille
   * Setup
+  * Update
 
 ## Solution utilisé
  * MongoDb
