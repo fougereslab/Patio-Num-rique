@@ -11,6 +11,8 @@
   * Commande Leds
   * Programmation (allumage extinction programmé)
   * Docs
+  * Bidouille
+  * Setup
 
 ## Solution utilisé
  * MongoDb
