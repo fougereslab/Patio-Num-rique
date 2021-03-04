@@ -10,19 +10,13 @@ Created:  2021-03-04T22:30:10.014Z
 """
 
 from flask import Flask
+from flask import render_template
+
 app = Flask(__name__)
 
 @app.route('/')
-def test():
-
-    try:
-        file = open("./www/index.html",'r')
-        page = file.read()
-        file.close()
-    except BaseException as ex:
-        print("Erreur récupération page : " + repr(ex))
-    else:
-        return page
+def index():
+    return render_template("./www/page/index.html")
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
