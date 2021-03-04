@@ -20,7 +20,7 @@ def test():
         page = file.read()
         file.close()
     except BaseException as ex:
-        print("Erreur récupération page")
+        print("Erreur récupération page : " + repr(ex))
     else:
         return page
 
