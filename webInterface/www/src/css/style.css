@@ -1,0 +1,27 @@
+/*
+Author: Mickaël Descamps - Mineyou
+Email : mickael.descamps@mineyou.fr
+Projet : Patio numérique
+Organisation : FougèresLab
+Desc: description
+
+style.css (c) 2021
+Created:  2021-03-04T23:05:58.104Z
+*/
+
+@font-face{
+    font-family: "Roboto";
+    src:    url("/src/font/Roboto-Black.ttf") format(900),
+            url("/src/font/Roboto-BlackItalic.ttf") format(900),
+            url("/src/font/Roboto-Bold.ttf") format(700),
+            url("/src/font/Roboto-BoldItalic.ttf") format(700),
+            url("/src/font/Roboto-Italic.ttf") format(400),
+            url("/src/font/Roboto-Light.ttf") format(300),
+            url("/src/font/Roboto-LightItalic.ttf") format(300),
+            url("/src/font/Roboto-Medium.ttf") format(500),
+            url("/src/font/Roboto-MediumItalic.ttf") format(500),
+            url("/src/font/Roboto-Regular.ttf") format(400),
+            url("/src/font/Roboto-Thin.ttf") format(100),
+            url("/src/font/Roboto-ThinItalic.ttf") format(100);
+
+}
