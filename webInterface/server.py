@@ -16,7 +16,7 @@ app = Flask(__name__)
 def test():
 
     try:
-        file = open("./www/page/index.html",r)
+        file = open("./www/page/index.html",'r')
         page = file.read()
         file.close()
     except BaseException as ex:
