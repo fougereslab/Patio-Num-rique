@@ -13,7 +13,7 @@ import subprocess
 import sys
 
 try:
-    result = subprocess.run("sudo git fetch",stdout=subprocess.PIPE,shell=True)
+    result = subprocess.run("sudo git pull",stdout=subprocess.PIPE,shell=True)
 except BaseException as ex:
     print("Erreur lors de la mise à jour")
 else:
