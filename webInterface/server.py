@@ -14,7 +14,15 @@ app = Flask(__name__)
 
 @app.route('/')
 def test():
-    return "Hello world"
+
+    try:
+        file = open("./www/page/index.html",r)
+        page = file.read()
+        file.close()
+    except BaseException as ex:
+        print("Erreur récupération page")
+    else:
+        return page
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
